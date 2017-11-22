@@ -1,0 +1,16 @@
+package examples;
+ 
+option java_package = "com.protobuf";
+option java_outer_classname = "Serializers";
+ 
+message Serializer {
+	required int32 id = 1;
+	required string title = 2;
+	required string className = 3;
+	enum Type {
+		Avro = 1;
+		Protobuf = 2;
+		Thrift = 3;
+	}
+	optional Type type = 4;
+}
