@@ -8,6 +8,576 @@ public final class Serializers {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface Serializer2OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:examples.Serializer2)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>required int32 id = 1;</code>
+     */
+    int getId();
+
+    /**
+     * <code>required string title = 2;</code>
+     */
+    boolean hasTitle();
+    /**
+     * <code>required string title = 2;</code>
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>required string title = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+  }
+  /**
+   * Protobuf type {@code examples.Serializer2}
+   */
+  public static final class Serializer2 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:examples.Serializer2)
+      Serializer2OrBuilder {
+    // Use Serializer2.newBuilder() to construct.
+    private Serializer2(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Serializer2(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Serializer2 defaultInstance;
+    public static Serializer2 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Serializer2 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Serializer2(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              title_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.protobuf.Serializers.internal_static_examples_Serializer2_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.protobuf.Serializers.internal_static_examples_Serializer2_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.protobuf.Serializers.Serializer2.class, com.protobuf.Serializers.Serializer2.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Serializer2> PARSER =
+        new com.google.protobuf.AbstractParser<Serializer2>() {
+      public Serializer2 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Serializer2(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Serializer2> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>required int32 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    private java.lang.Object title_;
+    /**
+     * <code>required string title = 2;</code>
+     */
+    public boolean hasTitle() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string title = 2;</code>
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string title = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      id_ = 0;
+      title_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTitle()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTitleBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTitleBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.protobuf.Serializers.Serializer2 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.protobuf.Serializers.Serializer2 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.protobuf.Serializers.Serializer2 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code examples.Serializer2}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:examples.Serializer2)
+        com.protobuf.Serializers.Serializer2OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.protobuf.Serializers.internal_static_examples_Serializer2_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.protobuf.Serializers.internal_static_examples_Serializer2_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.protobuf.Serializers.Serializer2.class, com.protobuf.Serializers.Serializer2.Builder.class);
+      }
+
+      // Construct using com.protobuf.Serializers.Serializer2.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        title_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.protobuf.Serializers.internal_static_examples_Serializer2_descriptor;
+      }
+
+      public com.protobuf.Serializers.Serializer2 getDefaultInstanceForType() {
+        return com.protobuf.Serializers.Serializer2.getDefaultInstance();
+      }
+
+      public com.protobuf.Serializers.Serializer2 build() {
+        com.protobuf.Serializers.Serializer2 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.protobuf.Serializers.Serializer2 buildPartial() {
+        com.protobuf.Serializers.Serializer2 result = new com.protobuf.Serializers.Serializer2(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.title_ = title_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.protobuf.Serializers.Serializer2) {
+          return mergeFrom((com.protobuf.Serializers.Serializer2)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.protobuf.Serializers.Serializer2 other) {
+        if (other == com.protobuf.Serializers.Serializer2.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasTitle()) {
+          bitField0_ |= 0x00000002;
+          title_ = other.title_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          
+          return false;
+        }
+        if (!hasTitle()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.protobuf.Serializers.Serializer2 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.protobuf.Serializers.Serializer2) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public boolean hasTitle() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public Builder clearTitle() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        title_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:examples.Serializer2)
+    }
+
+    static {
+      defaultInstance = new Serializer2(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:examples.Serializer2)
+  }
+
   public interface SerializerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:examples.Serializer)
       com.google.protobuf.MessageOrBuilder {
@@ -57,6 +627,32 @@ public final class Serializers {
      * <code>optional .examples.Serializer.Type type = 4;</code>
      */
     com.protobuf.Serializers.Serializer.Type getType();
+
+    /**
+     * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+     */
+    boolean hasSubSerializer();
+    /**
+     * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+     */
+    com.protobuf.Serializers.Serializer.SubSerializer getSubSerializer();
+    /**
+     * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+     */
+    com.protobuf.Serializers.Serializer.SubSerializerOrBuilder getSubSerializerOrBuilder();
+
+    /**
+     * <code>repeated int32 tags = 6;</code>
+     */
+    java.util.List<java.lang.Integer> getTagsList();
+    /**
+     * <code>repeated int32 tags = 6;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated int32 tags = 6;</code>
+     */
+    int getTags(int index);
   }
   /**
    * Protobuf type {@code examples.Serializer}
@@ -138,6 +734,40 @@ public final class Serializers {
               }
               break;
             }
+            case 42: {
+              com.protobuf.Serializers.Serializer.SubSerializer.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = subSerializer_.toBuilder();
+              }
+              subSerializer_ = input.readMessage(com.protobuf.Serializers.Serializer.SubSerializer.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(subSerializer_);
+                subSerializer_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 48: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                tags_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              tags_.add(input.readInt32());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020) && input.getBytesUntilLimit() > 0) {
+                tags_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                tags_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -146,6 +776,9 @@ public final class Serializers {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          tags_ = java.util.Collections.unmodifiableList(tags_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -268,6 +901,576 @@ public final class Serializers {
       // @@protoc_insertion_point(enum_scope:examples.Serializer.Type)
     }
 
+    public interface SubSerializerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:examples.Serializer.SubSerializer)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      boolean hasId();
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      int getId();
+
+      /**
+       * <code>required string title = 2;</code>
+       */
+      boolean hasTitle();
+      /**
+       * <code>required string title = 2;</code>
+       */
+      java.lang.String getTitle();
+      /**
+       * <code>required string title = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getTitleBytes();
+    }
+    /**
+     * Protobuf type {@code examples.Serializer.SubSerializer}
+     */
+    public static final class SubSerializer extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:examples.Serializer.SubSerializer)
+        SubSerializerOrBuilder {
+      // Use SubSerializer.newBuilder() to construct.
+      private SubSerializer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private SubSerializer(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final SubSerializer defaultInstance;
+      public static SubSerializer getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public SubSerializer getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SubSerializer(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                id_ = input.readInt32();
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                title_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.protobuf.Serializers.internal_static_examples_Serializer_SubSerializer_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.protobuf.Serializers.internal_static_examples_Serializer_SubSerializer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.protobuf.Serializers.Serializer.SubSerializer.class, com.protobuf.Serializers.Serializer.SubSerializer.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<SubSerializer> PARSER =
+          new com.google.protobuf.AbstractParser<SubSerializer>() {
+        public SubSerializer parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SubSerializer(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SubSerializer> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int ID_FIELD_NUMBER = 1;
+      private int id_;
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+
+      public static final int TITLE_FIELD_NUMBER = 2;
+      private java.lang.Object title_;
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public boolean hasTitle() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>required string title = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        id_ = 0;
+        title_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        if (!hasId()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        if (!hasTitle()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeInt32(1, id_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBytes(2, getTitleBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, id_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(2, getTitleBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.protobuf.Serializers.Serializer.SubSerializer parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(com.protobuf.Serializers.Serializer.SubSerializer prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code examples.Serializer.SubSerializer}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:examples.Serializer.SubSerializer)
+          com.protobuf.Serializers.Serializer.SubSerializerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.protobuf.Serializers.internal_static_examples_Serializer_SubSerializer_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.protobuf.Serializers.internal_static_examples_Serializer_SubSerializer_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.protobuf.Serializers.Serializer.SubSerializer.class, com.protobuf.Serializers.Serializer.SubSerializer.Builder.class);
+        }
+
+        // Construct using com.protobuf.Serializers.Serializer.SubSerializer.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          id_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          title_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.protobuf.Serializers.internal_static_examples_Serializer_SubSerializer_descriptor;
+        }
+
+        public com.protobuf.Serializers.Serializer.SubSerializer getDefaultInstanceForType() {
+          return com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance();
+        }
+
+        public com.protobuf.Serializers.Serializer.SubSerializer build() {
+          com.protobuf.Serializers.Serializer.SubSerializer result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.protobuf.Serializers.Serializer.SubSerializer buildPartial() {
+          com.protobuf.Serializers.Serializer.SubSerializer result = new com.protobuf.Serializers.Serializer.SubSerializer(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.id_ = id_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.title_ = title_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.protobuf.Serializers.Serializer.SubSerializer) {
+            return mergeFrom((com.protobuf.Serializers.Serializer.SubSerializer)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.protobuf.Serializers.Serializer.SubSerializer other) {
+          if (other == com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance()) return this;
+          if (other.hasId()) {
+            setId(other.getId());
+          }
+          if (other.hasTitle()) {
+            bitField0_ |= 0x00000002;
+            title_ = other.title_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          if (!hasId()) {
+            
+            return false;
+          }
+          if (!hasTitle()) {
+            
+            return false;
+          }
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.protobuf.Serializers.Serializer.SubSerializer parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.protobuf.Serializers.Serializer.SubSerializer) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int id_ ;
+        /**
+         * <code>required int32 id = 1;</code>
+         */
+        public boolean hasId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>required int32 id = 1;</code>
+         */
+        public int getId() {
+          return id_;
+        }
+        /**
+         * <code>required int32 id = 1;</code>
+         */
+        public Builder setId(int value) {
+          bitField0_ |= 0x00000001;
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required int32 id = 1;</code>
+         */
+        public Builder clearId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          id_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object title_ = "";
+        /**
+         * <code>required string title = 2;</code>
+         */
+        public boolean hasTitle() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>required string title = 2;</code>
+         */
+        public java.lang.String getTitle() {
+          java.lang.Object ref = title_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              title_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>required string title = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getTitleBytes() {
+          java.lang.Object ref = title_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            title_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>required string title = 2;</code>
+         */
+        public Builder setTitle(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          title_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string title = 2;</code>
+         */
+        public Builder clearTitle() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          title_ = getDefaultInstance().getTitle();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string title = 2;</code>
+         */
+        public Builder setTitleBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          title_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:examples.Serializer.SubSerializer)
+      }
+
+      static {
+        defaultInstance = new SubSerializer(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:examples.Serializer.SubSerializer)
+    }
+
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
@@ -383,11 +1586,56 @@ public final class Serializers {
       return type_;
     }
 
+    public static final int SUBSERIALIZER_FIELD_NUMBER = 5;
+    private com.protobuf.Serializers.Serializer.SubSerializer subSerializer_;
+    /**
+     * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+     */
+    public boolean hasSubSerializer() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+     */
+    public com.protobuf.Serializers.Serializer.SubSerializer getSubSerializer() {
+      return subSerializer_;
+    }
+    /**
+     * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+     */
+    public com.protobuf.Serializers.Serializer.SubSerializerOrBuilder getSubSerializerOrBuilder() {
+      return subSerializer_;
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 6;
+    private java.util.List<java.lang.Integer> tags_;
+    /**
+     * <code>repeated int32 tags = 6;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated int32 tags = 6;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated int32 tags = 6;</code>
+     */
+    public int getTags(int index) {
+      return tags_.get(index);
+    }
+
     private void initFields() {
       id_ = 0;
       title_ = "";
       className_ = "";
       type_ = com.protobuf.Serializers.Serializer.Type.Avro;
+      subSerializer_ = com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance();
+      tags_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -407,6 +1655,12 @@ public final class Serializers {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasSubSerializer()) {
+        if (!getSubSerializer().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -425,6 +1679,12 @@ public final class Serializers {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeEnum(4, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, subSerializer_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        output.writeInt32(6, tags_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -450,6 +1710,19 @@ public final class Serializers {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, subSerializer_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(tags_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -560,6 +1833,7 @@ public final class Serializers {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getSubSerializerFieldBuilder();
         }
       }
       private static Builder create() {
@@ -576,6 +1850,14 @@ public final class Serializers {
         bitField0_ = (bitField0_ & ~0x00000004);
         type_ = com.protobuf.Serializers.Serializer.Type.Avro;
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (subSerializerBuilder_ == null) {
+          subSerializer_ = com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance();
+        } else {
+          subSerializerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        tags_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -620,6 +1902,19 @@ public final class Serializers {
           to_bitField0_ |= 0x00000008;
         }
         result.type_ = type_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (subSerializerBuilder_ == null) {
+          result.subSerializer_ = subSerializer_;
+        } else {
+          result.subSerializer_ = subSerializerBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          tags_ = java.util.Collections.unmodifiableList(tags_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -652,6 +1947,19 @@ public final class Serializers {
         if (other.hasType()) {
           setType(other.getType());
         }
+        if (other.hasSubSerializer()) {
+          mergeSubSerializer(other.getSubSerializer());
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -668,6 +1976,12 @@ public final class Serializers {
         if (!hasClassName()) {
           
           return false;
+        }
+        if (hasSubSerializer()) {
+          if (!getSubSerializer().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -910,6 +2224,188 @@ public final class Serializers {
         return this;
       }
 
+      private com.protobuf.Serializers.Serializer.SubSerializer subSerializer_ = com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.protobuf.Serializers.Serializer.SubSerializer, com.protobuf.Serializers.Serializer.SubSerializer.Builder, com.protobuf.Serializers.Serializer.SubSerializerOrBuilder> subSerializerBuilder_;
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public boolean hasSubSerializer() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public com.protobuf.Serializers.Serializer.SubSerializer getSubSerializer() {
+        if (subSerializerBuilder_ == null) {
+          return subSerializer_;
+        } else {
+          return subSerializerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public Builder setSubSerializer(com.protobuf.Serializers.Serializer.SubSerializer value) {
+        if (subSerializerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          subSerializer_ = value;
+          onChanged();
+        } else {
+          subSerializerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public Builder setSubSerializer(
+          com.protobuf.Serializers.Serializer.SubSerializer.Builder builderForValue) {
+        if (subSerializerBuilder_ == null) {
+          subSerializer_ = builderForValue.build();
+          onChanged();
+        } else {
+          subSerializerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public Builder mergeSubSerializer(com.protobuf.Serializers.Serializer.SubSerializer value) {
+        if (subSerializerBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              subSerializer_ != com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance()) {
+            subSerializer_ =
+              com.protobuf.Serializers.Serializer.SubSerializer.newBuilder(subSerializer_).mergeFrom(value).buildPartial();
+          } else {
+            subSerializer_ = value;
+          }
+          onChanged();
+        } else {
+          subSerializerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public Builder clearSubSerializer() {
+        if (subSerializerBuilder_ == null) {
+          subSerializer_ = com.protobuf.Serializers.Serializer.SubSerializer.getDefaultInstance();
+          onChanged();
+        } else {
+          subSerializerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public com.protobuf.Serializers.Serializer.SubSerializer.Builder getSubSerializerBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSubSerializerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      public com.protobuf.Serializers.Serializer.SubSerializerOrBuilder getSubSerializerOrBuilder() {
+        if (subSerializerBuilder_ != null) {
+          return subSerializerBuilder_.getMessageOrBuilder();
+        } else {
+          return subSerializer_;
+        }
+      }
+      /**
+       * <code>optional .examples.Serializer.SubSerializer subSerializer = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.protobuf.Serializers.Serializer.SubSerializer, com.protobuf.Serializers.Serializer.SubSerializer.Builder, com.protobuf.Serializers.Serializer.SubSerializerOrBuilder> 
+          getSubSerializerFieldBuilder() {
+        if (subSerializerBuilder_ == null) {
+          subSerializerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.protobuf.Serializers.Serializer.SubSerializer, com.protobuf.Serializers.Serializer.SubSerializer.Builder, com.protobuf.Serializers.Serializer.SubSerializerOrBuilder>(
+                  getSubSerializer(),
+                  getParentForChildren(),
+                  isClean());
+          subSerializer_ = null;
+        }
+        return subSerializerBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> tags_ = java.util.Collections.emptyList();
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          tags_ = new java.util.ArrayList<java.lang.Integer>(tags_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getTagsList() {
+        return java.util.Collections.unmodifiableList(tags_);
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public int getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public Builder setTags(
+          int index, int value) {
+        ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public Builder addTags(int value) {
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 tags = 6;</code>
+       */
+      public Builder clearTags() {
+        tags_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:examples.Serializer)
     }
 
@@ -922,10 +2418,20 @@ public final class Serializers {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_examples_Serializer2_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_examples_Serializer2_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_examples_Serializer_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_examples_Serializer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_examples_Serializer_SubSerializer_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_examples_Serializer_SubSerializer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -936,11 +2442,15 @@ public final class Serializers {
   static {
     java.lang.String[] descriptorData = {
       "\n\"src/main/protobuf/serializer.proto\022\010ex" +
-      "amples\"\217\001\n\nSerializer\022\n\n\002id\030\001 \002(\005\022\r\n\005tit" +
-      "le\030\002 \002(\t\022\021\n\tclassName\030\003 \002(\t\022\'\n\004type\030\004 \001(" +
-      "\0162\031.examples.Serializer.Type\"*\n\004Type\022\010\n\004" +
-      "Avro\020\001\022\014\n\010Protobuf\020\002\022\n\n\006Thrift\020\003B\033\n\014com." +
-      "protobufB\013Serializers"
+      "amples\"(\n\013Serializer2\022\n\n\002id\030\001 \002(\005\022\r\n\005tit" +
+      "le\030\002 \002(\t\"\204\002\n\nSerializer\022\n\n\002id\030\001 \002(\005\022\r\n\005t" +
+      "itle\030\002 \002(\t\022\021\n\tclassName\030\003 \002(\t\022\'\n\004type\030\004 " +
+      "\001(\0162\031.examples.Serializer.Type\0229\n\rsubSer" +
+      "ializer\030\005 \001(\0132\".examples.Serializer.SubS" +
+      "erializer\022\014\n\004tags\030\006 \003(\005\032*\n\rSubSerializer" +
+      "\022\n\n\002id\030\001 \002(\005\022\r\n\005title\030\002 \002(\t\"*\n\004Type\022\010\n\004A" +
+      "vro\020\001\022\014\n\010Protobuf\020\002\022\n\n\006Thrift\020\003B\033\n\014com.p" +
+      "rotobufB\013Serializers"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -954,12 +2464,24 @@ public final class Serializers {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_examples_Serializer_descriptor =
+    internal_static_examples_Serializer2_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_examples_Serializer2_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_examples_Serializer2_descriptor,
+        new java.lang.String[] { "Id", "Title", });
+    internal_static_examples_Serializer_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_examples_Serializer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_examples_Serializer_descriptor,
-        new java.lang.String[] { "Id", "Title", "ClassName", "Type", });
+        new java.lang.String[] { "Id", "Title", "ClassName", "Type", "SubSerializer", "Tags", });
+    internal_static_examples_Serializer_SubSerializer_descriptor =
+      internal_static_examples_Serializer_descriptor.getNestedTypes().get(0);
+    internal_static_examples_Serializer_SubSerializer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_examples_Serializer_SubSerializer_descriptor,
+        new java.lang.String[] { "Id", "Title", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

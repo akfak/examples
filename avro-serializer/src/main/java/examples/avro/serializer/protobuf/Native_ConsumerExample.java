@@ -23,7 +23,7 @@ public class Native_ConsumerExample {
 
 
     KafkaConsumer<String,Serializers.Serializer> consumer = new KafkaConsumer<>(props);
-    consumer.subscribe(Arrays.asList("ProtobufNative"));
+    consumer.subscribe(Arrays.asList("ProtobufNative_"));
 
 
     try {

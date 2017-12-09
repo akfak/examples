@@ -19,6 +19,9 @@ In order to use it, you should replace `kafka-avro-serializer` dependency with t
   * Serialize Protobuf object with Avro and deserialize it back to Avro object `GenericRecord`:
     * Use `KafkaProtobufAvroSerializer` and `KafkaProtobufAvroDeserializer`.
     * Example: `Avro_ProducerExample` and `Avro_GenericRecord_ConsumerExample`.
+  * Protobuf serialization with Protobuf object and convert the object to `GenericRecord`:
+    * Use `KafkaProtobufSerializer` and `KafkaProtobufDeserializer`.
+    * Example: `Native_ProducerExample` and `Native_GenericRecord_ConsumerExample`.
 * Example classes in `examples.avro.serializer.protobuf`.
 * Generate Java class from `serializer.proto` (already generated)  
 protoc --java_out=src/main/java/ src/main/protobuf/serializer.proto
@@ -34,6 +37,9 @@ protoc --java_out=src/main/java/ src/main/protobuf/serializer.proto
   * Serialize Thrift object with Avro and deserialize it back to Avro object `GenericRecord`:
     * Use `KafkaThriftAvroSerializer` and `KafkaThriftAvroDeserializer`.
     * Example: `Avro_ProducerExample` and `Avro_GenericRecord_ConsumerExample`.
+  * Thrift serialization with Thrift object and convert the object to `GenericRecord`:
+    * Use `KafkaThriftSerializer` and `KafkaThriftDeserializer`.
+    * Example: `Native_ProducerExample` and `Native_GenericRecord_ConsumerExample`.
 * Example classes in `examples.avro.serializer.thrift`.
 * Generate Java class from `serializer.thrift` (already generated)  
 thrift -out src/main/java -r --gen java src/main/thrift/serializer.thrift

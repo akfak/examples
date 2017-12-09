@@ -2,6 +2,11 @@ package examples;
  
 option java_package = "com.protobuf";
 option java_outer_classname = "Serializers";
+
+message Serializer2 {
+	required int32 id = 1;
+	required string title = 2;
+}
  
 message Serializer {
 	required int32 id = 1;
@@ -13,4 +18,10 @@ message Serializer {
 		Thrift = 3;
 	}
 	optional Type type = 4;
+	message SubSerializer {
+		required int32 id = 1;
+		required string title = 2;
+	}
+	optional SubSerializer subSerializer = 5;
+	repeated int32 tags = 6;
 }

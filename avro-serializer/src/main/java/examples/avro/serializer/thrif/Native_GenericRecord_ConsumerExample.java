@@ -8,7 +8,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import java.util.Arrays;
 import java.util.Properties;
 
-public class Avro_GenericRecord_ConsumerExample {
+public class Native_GenericRecord_ConsumerExample {
   public static void main(String[] args){
 
     String url = "http://localhost:8081";
@@ -17,13 +17,14 @@ public class Avro_GenericRecord_ConsumerExample {
     Properties props = new Properties();
     props.put("bootstrap.servers", "localhost:9092");
     props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-    props.put("value.deserializer", "io.confluent.kafka.serializers.KafkaThriftAvroDeserializer");
+    props.put("value.deserializer", "io.confluent.kafka.serializers.KafkaThriftDeserializer");
     props.put("schema.registry.url", url);
     props.put("group.id", "consumer-tutorial");
+    props.put("convertToGenericRecord", "");
 
 
     KafkaConsumer<String, GenericRecord> consumer = new KafkaConsumer<>(props);
-    consumer.subscribe(Arrays.asList("KafkaThriftAvro"));
+    consumer.subscribe(Arrays.asList("ThriftNative_"));
 
 
     try {
